@@ -10,17 +10,18 @@ namespace SchoolDemoSystem.Models
     public class StudentDbModel
     {
       public Int32 StudentID { get; set; }
-      [Required(ErrorMessage ="The field is required")]
-        [Display(Name ="Full Name")]
-        public string FullName { get; set; }
 
-      [Required(ErrorMessage ="The Field is required.")]
-      [Display(Name ="Date of Birth")]
-      public DateTime  DateOfBirth { get; set; }
+         [Required(ErrorMessage ="The field is required")]
+         [Display(Name ="Full Name")]
+         public string FullName { get; set; }
 
-    [Required(ErrorMessage ="The field is required.")]
-    [Display(Name ="Gender")]
-      public string  Gender { get; set; }
+         [Required(ErrorMessage ="The Field is required.")]
+         [Display(Name ="Date of Birth")]
+         public DateTime  DateOfBirth { get; set; }
+
+         [Required(ErrorMessage ="The field is required.")]
+         [Display(Name ="Gender")]
+         public string  Gender { get; set; }
 
         [Required(ErrorMessage = "The field is required.")]
         [Display(Name = "Address")]
@@ -28,15 +29,30 @@ namespace SchoolDemoSystem.Models
 
         [Required(ErrorMessage = "The field is required.")]
         [Display(Name = "Country")]
-        public Int32  Country { get; set;}
+        public Int32  CountryId { get; set;}
+
+        [Required(ErrorMessage = "The field is required.")]
+        [Display(Name = "Country")]
+        public string CountryName { get; set; }
+
+
 
         [Required(ErrorMessage = "The field is required.")]
         [Display(Name = "State")]
-        public Int32  State { get; set; }
+        public Int32  StateId { get; set; }
+
+        [Required(ErrorMessage = "The field is required.")]
+        [Display(Name = "State")]
+        public string StateName { get; set; }
 
         [Required(ErrorMessage = "The field is required.")]
         [Display(Name = "City")]
-        public Int32 City { get; set; }
+        public Int32 CityId { get; set; }
+
+
+        [Required(ErrorMessage = "The field is required.")]
+        [Display(Name = "City")]
+        public string CityName { get; set; }
 
         [Required(ErrorMessage = "The field is required.")]
         [Display(Name = "Contact")]
