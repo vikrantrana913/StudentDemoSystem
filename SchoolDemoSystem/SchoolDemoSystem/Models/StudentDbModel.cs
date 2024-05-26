@@ -4,12 +4,24 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Optimization;
 
 namespace SchoolDemoSystem.Models
 {
     public class StudentDbModel
     {
-      public Int32 StudentID { get; set; }
+
+        public List<Country> CountriesList { get; set; }
+        public List<State> StatesList { get; set; }
+        public List<City> CitiesList { get; set; }
+
+
+        public int selectcountrybyId_ { get; set; }
+        public int selectstatebyId_ { get; set; }
+        public int selectcitybyId_ { get; set; }
+
+
+        public Int32 StudentID { get; set; }
 
          [Required(ErrorMessage ="The field is required")]
          [Display(Name ="Full Name")]
@@ -67,4 +79,23 @@ namespace SchoolDemoSystem.Models
         public string  Photo { get; set; }
 
     }
+
+    public class Country
+    {
+        public int CountryId { get; set; }
+        public string CountryName { get; set; }
+    }
+
+    public class State
+    {
+        public int StateId { get; set; }
+        public string StateName { get; set; }
+    }
+
+    public class City
+    {
+        public int CityId { get; set; }
+        public string CityName { get; set; }
+    }
+
 }
