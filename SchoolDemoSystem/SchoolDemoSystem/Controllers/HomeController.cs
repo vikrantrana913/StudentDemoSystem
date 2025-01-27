@@ -38,6 +38,7 @@ namespace SchoolDemoSystem.Controllers
 
             return View();
         }
+        
 
         public ActionResult Contact()
         {
